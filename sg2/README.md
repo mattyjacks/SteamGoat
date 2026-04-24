@@ -1,10 +1,8 @@
-<a href="https://demo-nextjs-with-supabase.vercel.app/">
-  <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
-  <h1 align="center">Next.js and Supabase Starter Kit</h1>
-</a>
+<h1 align="center">SteamGOAT</h1>
+<h2 align="center">Greatest Of All Time Under Pressure</h2>
 
 <p align="center">
- The fastest way to build apps with Next.js and Supabase
+ Government Contracting Solutions - WOSB Certified
 </p>
 
 <p align="center">
@@ -17,21 +15,33 @@
 </p>
 <br/>
 
-## Features
+## About SteamGOAT
 
-- Works across the entire [Next.js](https://nextjs.org) stack
-  - App Router
-  - Pages Router
-  - Proxy
-  - Client
-  - Server
-  - It just works!
-- supabase-ssr. A package to configure Supabase Auth to use cookies
-- Password-based authentication block installed via the [Supabase UI Library](https://supabase.com/ui/docs/nextjs/password-based-auth)
-- Styling with [Tailwind CSS](https://tailwindcss.com)
-- Components with [shadcn/ui](https://ui.shadcn.com/)
-- Optional deployment with [Supabase Vercel Integration and Vercel deploy](#deploy-your-own)
-  - Environment variables automatically assigned to Vercel project
+SteamGOAT is a Women-Owned Small Business (WOSB) specializing in government contracting solutions. Based in Washington State, we deliver excellence under pressure with a commitment to quality, compliance, and ethical business practices.
+
+### Leadership
+- **Joy Smith** - CEO & Owner (75%) - Black woman entrepreneur
+
+### Services
+- **NAICS 541511**: Custom Computer Programming Services
+  - Custom software development
+  - RDAP system programming
+  - Application development
+
+- **NAICS 541512**: Computer Systems Design Services
+  - System architecture design
+  - IT consulting services
+  - Infrastructure planning
+
+- **NAICS 541519**: Other Computer Related Services
+  - Software licenses & management
+  - IT support & maintenance
+  - Training & documentation
+
+### Certifications
+- WOSB (Women-Owned Small Business) Certified
+- SAM (System for Award Management) Registered
+- Committed to ethical labor practices
 
 ## Demo
 
