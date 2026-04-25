@@ -10,10 +10,13 @@ export const metadata: Metadata = {
 };
 
 const naicsCodes = [
-  { code: "541511", title: "Custom Computer Programming Services", description: "Custom software development, RDAP system programming, web/mobile application development, database design, API integrations", primary: true },
-  { code: "541512", title: "Computer Systems Design Services", description: "System architecture, IT consulting, infrastructure planning, cloud migration, security architecture", primary: true },
-  { code: "541519", title: "Other Computer Related Services", description: "Software licensing, IT support & maintenance, training programs, technical documentation, help desk", primary: true },
-  { code: "561210", title: "Facilities Support Services", description: "Comprehensive facilities management, base operations support, maintenance programs, logistics", primary: true },
+  { code: "541511", title: "Custom Computer Programming Services", description: "Custom software development, RDAP system programming, web/mobile application development, database design, API integrations, AI tools and automation", primary: true },
+  { code: "541512", title: "Computer Systems Design Services", description: "System architecture, IT consulting, infrastructure planning, cloud migration, security architecture, AI integration", primary: true },
+  { code: "541519", title: "Other Computer Related Services", description: "Software licensing, IT support & maintenance, training programs, technical documentation, help desk, AI tool deployment", primary: true },
+  { code: "561210", title: "Facilities Support Services", description: "Comprehensive facilities management, base operations support, maintenance programs, logistics, compound staffing model", primary: true },
+  { code: "561311", title: "Permanent Staffing Services", description: "Permanent facility personnel, security guards, transport crews, compound operations staff, long-term workforce solutions", primary: true },
+  { code: "561320", title: "Temporary Staffing Services", description: "Temporary facility personnel, contract guards, transport crews, emergency response staffing, flexible workforce deployment", primary: true },
+  { code: "561621", title: "Security Systems Installation & Monitoring", description: "Security systems design and installation, monitoring services, surveillance integration, access control systems, threat detection", primary: true },
   { code: "334111", title: "Electronic Computer Manufacturing", description: "Assembly and manufacturing of computing equipment, ruggedized systems, tactical electronics", primary: false },
   { code: "334220", title: "Radio & TV Broadcasting Equipment", description: "Communication systems, radar equipment, surveillance electronics manufacturing", primary: false },
   { code: "334310", title: "Audio & Video Equipment Manufacturing", description: "Camera systems, security imaging, autonomous vehicle sensors, display technology", primary: false },

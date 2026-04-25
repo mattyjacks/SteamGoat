@@ -62,7 +62,7 @@ export default function Home() {
                   and facilities support for state and federal agencies.
                 </p>
                 <p className="text-sm text-muted-foreground mb-8 fade-in-up font-mono" style={{animationDelay: '0.25s'}}>
-                  NAICS: 541511 | 541512 | 541519 | 561210
+                  NAICS: 541511 | 541512 | 541519 | 561210 | 561311 | 561320 | 561621
                 </p>
                 <div className="flex gap-3 flex-wrap mb-8 fade-in-up" style={{animationDelay: '0.3s'}}>
                   <Link href="/govcon" className="bg-blue-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition-all flex items-center gap-2 shadow-sm group">
@@ -156,10 +156,10 @@ export default function Home() {
                       <h3 className="font-bold">Custom Computer Programming</h3>
                       <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">541511</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-3">Enterprise-grade custom software, RDAP system programming, and application development for government agencies.</p>
+                    <p className="text-sm text-muted-foreground mb-3">Enterprise-grade custom software, RDAP system programming, AI tools, and application development for government agencies.</p>
                     <ul className="flex flex-wrap gap-2 text-xs">
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Custom Software</li>
-                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">RDAP Systems</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">AI Tools</li>
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Web Applications</li>
                     </ul>
                   </div>
@@ -175,10 +175,10 @@ export default function Home() {
                       <h3 className="font-bold">Computer Systems Design</h3>
                       <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">541512</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-3">System architecture design, IT infrastructure consulting, and strategic technology planning.</p>
+                    <p className="text-sm text-muted-foreground mb-3">System architecture design, IT infrastructure consulting, AI integration, and strategic technology planning.</p>
                     <ul className="flex flex-wrap gap-2 text-xs">
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Architecture</li>
-                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">IT Consulting</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">AI Integration</li>
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Infrastructure</li>
                     </ul>
                   </div>
@@ -194,11 +194,11 @@ export default function Home() {
                       <h3 className="font-bold">Other Computer Related Services</h3>
                       <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">541519</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-3">Software licensing, IT support and maintenance, training programs, and technical documentation.</p>
+                    <p className="text-sm text-muted-foreground mb-3">Software licensing, IT support and maintenance, AI tool deployment, training programs, and technical documentation.</p>
                     <ul className="flex flex-wrap gap-2 text-xs">
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Licensing</li>
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">IT Support</li>
-                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Training</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">AI Deployment</li>
                     </ul>
                   </div>
                 </div>
@@ -210,14 +210,52 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-bold">Facilities Support Services</h3>
+                      <h3 className="font-bold">Facilities & Staffing Support</h3>
                       <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">561210</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-3">Comprehensive facilities management, operations support, and base operations services.</p>
+                    <p className="text-sm text-muted-foreground mb-3">Comprehensive facilities management, compound staffing model, operations support, and base operations services.</p>
                     <ul className="flex flex-wrap gap-2 text-xs">
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Facilities Mgmt</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Staffing</li>
                       <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Operations</li>
-                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Base Support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="group bg-white dark:bg-slate-900 border border-border rounded-lg p-6 hover:shadow-md transition-all hover:border-blue-500 fade-in-up" style={{animationDelay: '0.5s'}}>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Users className="w-6 h-6 text-blue-700 dark:text-blue-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="font-bold">Permanent & Temporary Staffing</h3>
+                      <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">561311/561320</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-3">Facility personnel, security guards, transport crews, and emergency response staffing for government compounds.</p>
+                    <ul className="flex flex-wrap gap-2 text-xs">
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Permanent Staff</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Temporary Staff</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Security</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="group bg-white dark:bg-slate-900 border border-border rounded-lg p-6 hover:shadow-md transition-all hover:border-blue-500 fade-in-up" style={{animationDelay: '0.6s'}}>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Lock className="w-6 h-6 text-blue-700 dark:text-blue-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="font-bold">Security Systems & Monitoring</h3>
+                      <span className="text-xs font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded">561621</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-3">Security systems design, installation, monitoring services, access control, and threat detection for government facilities.</p>
+                    <ul className="flex flex-wrap gap-2 text-xs">
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Installation</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Monitoring</li>
+                      <li className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Access Control</li>
                     </ul>
                   </div>
                 </div>
@@ -350,6 +388,9 @@ export default function Home() {
                   <li>541512 - Systems Design</li>
                   <li>541519 - IT Services</li>
                   <li>561210 - Facilities Support</li>
+                  <li>561311 - Permanent Staffing</li>
+                  <li>561320 - Temporary Staffing</li>
+                  <li>561621 - Security Systems</li>
                 </ul>
               </div>
             </div>
