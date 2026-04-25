@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { CheckCircle2, FileText, Award, Shield, AlertCircle } from "lucide-react";
 
@@ -376,18 +377,23 @@ const verificationDocuments = [
 export default function Verify() {
   return (
     <main className="min-h-screen flex flex-col">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 sticky top-0 bg-background/95 backdrop-blur">
-        <div className="w-full max-w-7xl flex justify-between items-center p-3 px-5">
-          <Link href="/" className="flex gap-2 items-center font-bold text-xl hover:opacity-80">
-            <span className="text-blue-600">SteamGOAT</span>
-            <span className="text-xs text-muted-foreground ml-2">Greatest Of All Time Under Pressure</span>
+      <nav aria-label="Primary navigation" className="w-full flex justify-center border-b border-border h-20 sticky top-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg z-50 shadow-sm">
+        <div className="w-full max-w-7xl flex justify-between items-center px-5">
+          <Link href="/" aria-label="SteamGOAT - Home" className="flex gap-3 items-center font-bold text-2xl hover:opacity-90 transition group">
+            <div className="w-10 h-10 relative group-hover:scale-105 transition-transform duration-300">
+              <Image src="/steamgoat-logo-1a.png" alt="SteamGOAT Logo" width={40} height={40} className="w-full h-full object-contain" />
+            </div>
+            <div>
+              <div className="text-blue-700 dark:text-blue-400">SteamGOAT</div>
+              <div className="text-[10px] text-muted-foreground font-normal tracking-wider uppercase">OMWBE/WOSB Certified</div>
+            </div>
           </Link>
           <div className="flex items-center gap-6">
-            <Link href="/#services" className="text-sm hover:underline">Services</Link>
-            <Link href="/products" className="text-sm hover:underline">Products</Link>
-            <Link href="/verify" className="text-sm hover:underline font-semibold">Verify</Link>
-            <Link href="/#about" className="text-sm hover:underline">About</Link>
-            <Link href="/#contact" className="text-sm hover:underline">Contact</Link>
+            <Link href="/govcon" className="text-sm font-medium hover:text-blue-700 transition">GovCon Hub</Link>
+            <Link href="/#services" className="text-sm font-medium hover:text-blue-700 transition">Services</Link>
+            <Link href="/products" className="text-sm font-medium hover:text-blue-700 transition">Products</Link>
+            <Link href="/verify" className="text-sm font-semibold text-blue-700 dark:text-blue-400">Verify</Link>
+            <Link href="/#contact" className="bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-800 transition shadow-sm">Contact Us</Link>
             <ThemeSwitcher />
           </div>
         </div>
