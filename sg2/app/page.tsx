@@ -22,6 +22,7 @@ export default function Home() {
             <Link href="/govcon" className="text-sm font-medium hover:text-blue-700 transition">GovCon Hub</Link>
             <Link href="#services" className="text-sm font-medium hover:text-blue-700 transition">Services</Link>
             <Link href="/products" className="text-sm font-medium hover:text-blue-700 transition">Products</Link>
+            <Link href="/mvp" className="text-sm font-medium text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 transition flex items-center gap-1">PathReady <span className="text-[9px] bg-emerald-100 dark:bg-emerald-900/30 px-1.5 py-0.5 rounded font-bold">MVP</span></Link>
             <Link href="/verify" className="text-sm font-medium hover:text-blue-700 transition">Verify</Link>
             <Link href="#contact" className="bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-800 transition shadow-sm">Contact Us</Link>
             <ThemeSwitcher />
@@ -367,6 +368,7 @@ export default function Home() {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li><Link href="/govcon" className="hover:text-blue-700 transition">GovCon Hub</Link></li>
                   <li><Link href="/products" className="hover:text-blue-700 transition">Products</Link></li>
+                  <li><Link href="/mvp" className="hover:text-emerald-600 transition font-medium text-emerald-700 dark:text-emerald-400">PathReady MVP</Link></li>
                   <li><Link href="/verify" className="hover:text-blue-700 transition">Verify Credentials</Link></li>
                   <li><Link href="/capability-statement" className="hover:text-blue-700 transition">Capability Statement</Link></li>
                 </ul>
