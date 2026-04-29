@@ -18,6 +18,7 @@ import {
   Clock,
   MapPin,
   Building2,
+  ShieldCheck,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -30,6 +31,7 @@ const navItems = [
   { href: "/mvp/transition", label: "Transition Readiness", icon: ArrowLeftRight, description: "IEP & 504 Support" },
   { href: "/mvp/attendance", label: "Attendance Tracker", icon: Clock, description: "GPS Time & Audit Logs" },
   { href: "/mvp/dvr", label: "DVR Services", icon: Building2, description: "Placement, Training & Billing" },
+  { href: "/mvp/admin", label: "Admin Portal", icon: ShieldCheck, description: "Fee Schedules & Config" },
 ];
 
 export default function MVPLayout({ children }: { children: React.ReactNode }) {

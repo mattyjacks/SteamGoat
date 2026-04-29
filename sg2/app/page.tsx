@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { Award, Code, CheckCircle2, Shield, ArrowRight, Target, Lock, Briefcase, TrendingUp, Users, FileText, Download, Building2, BadgeCheck } from "lucide-react";
+import { Award, Code, CheckCircle2, Shield, ArrowRight, Target, Lock, Briefcase, TrendingUp, Users, FileText, Download, Building2, BadgeCheck, Sparkles, BookOpen, ClipboardCheck, ArrowLeftRight, Clock } from "lucide-react";
 import Image from "next/image";
 import { InteractiveLogo } from "@/components/interactive-logo";
 
@@ -91,6 +91,127 @@ export default function Home() {
               <div className="flex justify-center fade-in-up" style={{animationDelay: '0.15s'}}>
                 <InteractiveLogo />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MVP Showcase Section */}
+        <section className="w-full py-20 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border-y border-emerald-200 dark:border-emerald-800/30" aria-label="PathReady MVP Platform">
+          <div className="max-w-7xl mx-auto px-5">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 px-4 py-1.5 rounded-md mb-6 font-semibold text-xs tracking-wider uppercase fade-in-down">
+                <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+                Featured Product
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-3 text-slate-900 dark:text-white">PathReady MVP Platform</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                A comprehensive career readiness and DVR service delivery platform for high school students, individuals with disabilities, and workforce development programs. WCAG 2.1 AA compliant, Section 508 accessible, and government-ready.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <ClipboardCheck className="w-6 h-6 text-emerald-700 dark:text-emerald-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">5 Career Assessments</h3>
+                    <p className="text-sm text-muted-foreground">Research-backed assessments covering interests, skills, values, lifestyle, and aptitudes to discover matching career pathways.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Briefcase className="w-6 h-6 text-emerald-700 dark:text-emerald-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">100+ Career Profiles</h3>
+                    <p className="text-sm text-muted-foreground">Browse careers with real 2026 salary data, education requirements, growth outlook, and day-in-the-life descriptions.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-6 h-6 text-emerald-700 dark:text-emerald-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">20+ Learning Modules</h3>
+                    <p className="text-sm text-muted-foreground">Self-paced employability skills training covering resume writing, interview prep, workplace communication, and financial literacy.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <ArrowLeftRight className="w-6 h-6 text-emerald-700 dark:text-emerald-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">Transition Planning</h3>
+                    <p className="text-sm text-muted-foreground">IEP/504 aligned transition readiness tracking across employment, education, and independent living domains.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-emerald-700 dark:text-emerald-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">DVR Service Delivery</h3>
+                    <p className="text-sm text-muted-foreground">Complete DVR system with job placement, training, retention, Pre-ETS pipeline, bonus tracking, and SDOR-ready billing.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 border-2 border-emerald-200 dark:border-emerald-800/50 shadow-lg">
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center justify-between p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+                    <span className="font-semibold text-slate-900 dark:text-white">Active Customers</span>
+                    <span className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">247</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+                    <span className="font-semibold text-slate-900 dark:text-white">Placement Rate</span>
+                    <span className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">78.4%</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+                    <span className="font-semibold text-slate-900 dark:text-white">FY Revenue</span>
+                    <span className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">$847K</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+                    <span className="font-semibold text-slate-900 dark:text-white">Bonus Capture</span>
+                    <span className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">82.1%</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg p-6 text-white">
+                  <p className="text-sm font-semibold mb-4 opacity-90">Complete CRP-IL Fee Schedule (Exhibit L)</p>
+                  <div className="space-y-2 text-sm mb-6">
+                    <div className="flex items-center justify-between">
+                      <span>9 Service Categories</span>
+                      <span className="font-mono font-bold">$3.3K - $4.8K</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>7 Performance Bonuses</span>
+                      <span className="font-mono font-bold">$375 - $722</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Max Bonus/Customer</span>
+                      <span className="font-mono font-bold">$2,729</span>
+                    </div>
+                  </div>
+                  <Link href="/mvp/admin/fee-schedules" className="block w-full bg-white text-emerald-700 font-semibold py-2 rounded-lg text-center hover:bg-emerald-50 transition">
+                    View Fee Schedule
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link href="/mvp" className="bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-800 transition-all flex items-center gap-2 shadow-md group">
+                Explore PathReady <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
+              </Link>
+              <Link href="/mvp/admin" className="border-2 border-emerald-700 text-emerald-700 dark:text-emerald-400 dark:border-emerald-500 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition">
+                Admin Portal
+              </Link>
             </div>
           </div>
         </section>

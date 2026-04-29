@@ -74,6 +74,10 @@ function categoryLabel(cat: ServiceCategory) {
     "intensive-training": "Intensive Training",
     "job-retention": "Job Retention",
     "pre-ets": "Pre-ETS",
+    "twe": "Trial Work Experience",
+    "cba": "Community Based Assessment",
+    "discovery": "Discovery Services",
+    "customized-jp": "Customized Job Placement",
   };
   return map[cat];
 }
@@ -84,6 +88,10 @@ function categoryColor(cat: ServiceCategory) {
     "intensive-training": "text-purple-700 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30",
     "job-retention": "text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30",
     "pre-ets": "text-orange-700 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30",
+    "twe": "text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30",
+    "cba": "text-teal-700 dark:text-teal-400 bg-teal-100 dark:bg-teal-900/30",
+    "discovery": "text-pink-700 dark:text-pink-400 bg-pink-100 dark:bg-pink-900/30",
+    "customized-jp": "text-cyan-700 dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-900/30",
   };
   return map[cat];
 }

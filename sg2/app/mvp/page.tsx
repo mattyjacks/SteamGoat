@@ -22,6 +22,7 @@ import {
   Clock,
   MapPin,
   Building2,
+  ShieldCheck,
 } from "lucide-react";
 
 const features = [
@@ -80,6 +81,15 @@ const features = [
     badge: "Audit Ready",
   },
   {
+    href: "/mvp/admin",
+    icon: ShieldCheck,
+    title: "Admin Portal",
+    description: "Manage CRP-IL fee schedules, performance bonuses, service configuration, invoice validation rules, and program settings. Complete Exhibit L fee data with search and filtering.",
+    color: "slate",
+    stats: "Fee Schedules",
+    badge: "Admin",
+  },
+  {
     href: "/mvp/dashboard",
     icon: LayoutDashboard,
     title: "My Dashboard",
@@ -107,6 +117,7 @@ const colorMap: Record<string, { bg: string; text: string; border: string; badge
   rose: { bg: "bg-rose-100 dark:bg-rose-900/30", text: "text-rose-700 dark:text-rose-400", border: "hover:border-rose-500", badge: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400" },
   teal: { bg: "bg-teal-100 dark:bg-teal-900/30", text: "text-teal-700 dark:text-teal-400", border: "hover:border-teal-500", badge: "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400" },
   indigo: { bg: "bg-indigo-100 dark:bg-indigo-900/30", text: "text-indigo-700 dark:text-indigo-400", border: "hover:border-indigo-500", badge: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400" },
+  slate: { bg: "bg-slate-200 dark:bg-slate-700/30", text: "text-slate-700 dark:text-slate-300", border: "hover:border-slate-500", badge: "bg-slate-200 dark:bg-slate-700/30 text-slate-700 dark:text-slate-300" },
 };
 
 export default function MVPHub() {

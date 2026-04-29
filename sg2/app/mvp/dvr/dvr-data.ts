@@ -5,10 +5,10 @@
 
 /* ---- Types ---- */
 
-export type ServiceCategory = "job-placement" | "intensive-training" | "job-retention" | "pre-ets";
+export type ServiceCategory = "job-placement" | "intensive-training" | "job-retention" | "pre-ets" | "twe" | "cba" | "discovery" | "customized-jp";
 export type CustomerStatus = "intake" | "active" | "placed" | "stabilized" | "retained" | "closed";
 export type InvoiceStatus = "draft" | "pending" | "submitted" | "paid" | "rejected";
-export type BonusType = "healthcare" | "high-wage" | "rapid-placement" | "rural-residence" | "rural-job";
+export type BonusType = "healthcare" | "high-wage" | "rapid-placement" | "rural-residence" | "rural-job" | "permanent-employment" | "cba-permanent" | "cba-healthcare";
 export type PreEtsType = "wble-a" | "wble-b" | "wble-c" | "wrt-d" | "info-interview" | "job-shadow";
 
 export interface ServiceFee {
@@ -101,13 +101,26 @@ export interface PreEtsStudent {
   notes: string[];
 }
 
-/* ---- Fee Schedule Data ---- */
+/* ---- Fee Schedule Data (Exhibit L - CRP-IL - Revised 07/01/2025) ---- */
 
 export const serviceFees: ServiceFee[] = [
-  // Job Placement
-  { id: "jp-1", category: "job-placement", name: "Job Placement", level: "Level 1", intakeFee: 665, activityFee: 618, outcomeFee: 1936, totalFee: 3219, description: "Standard placement - competitive integrated employment", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Paystub or employer letter", "Outcome SDOR"] },
-  { id: "jp-2", category: "job-placement", name: "Job Placement", level: "Level 2", intakeFee: 706, activityFee: 994, outcomeFee: 2076, totalFee: 3776, description: "Enhanced placement - additional barriers to employment", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Paystub or employer letter", "Outcome SDOR", "Barrier documentation"] },
-  { id: "jp-3", category: "job-placement", name: "Job Placement", level: "Level 3", intakeFee: 746, activityFee: 1370, outcomeFee: 2216, totalFee: 4332, description: "Intensive placement - significant barriers requiring customized approach", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Paystub or employer letter", "Outcome SDOR", "Customized plan documentation"] },
+  // Trial Work Experience
+  { id: "twe-1", category: "twe", name: "Trial Work Experience", level: "One Level", intakeFee: 886, activityFee: 0, outcomeFee: 2426, totalFee: 3312, description: "Time-limited work experience to assess vocational interests, strengths, abilities, and needs", requirements: ["SDOP authorization", "TWE plan with measurable goals", "Daily attendance logs", "Outcome assessment report", "SDOR within 30 days"] },
+
+  // Community Based Assessment
+  { id: "cba-1", category: "cba", name: "Community Based Assessment", level: "Standard", intakeFee: 746, activityFee: 0, outcomeFee: 2059, totalFee: 2805, description: "Community-based situational assessment to determine vocational interests and support needs", requirements: ["SDOP authorization", "Assessment plan", "Employer site documentation", "Written assessment report", "SDOR within 30 days"] },
+  { id: "cba-db", category: "cba", name: "CBA - Deafblind", level: "Deafblind", intakeFee: 1090, activityFee: 0, outcomeFee: 2986, totalFee: 4076, description: "Specialized CBA for individuals who are deafblind requiring additional accommodations", requirements: ["SDOP authorization", "DB accommodation plan", "Interpreter logs", "Written assessment report", "SDOR within 30 days"] },
+
+  // Customized Employment - Discovery
+  { id: "ce-disc", category: "discovery", name: "Discovery Services", level: "One Level", intakeFee: 733, activityFee: 1019, outcomeFee: 2324, totalFee: 4076, description: "Person-centered discovery process to identify strengths, conditions for employment, and job matches", requirements: ["SDOP authorization", "Discovery profile document", "Informational interviews", "Community mapping", "Visual resume/portfolio", "SDOR within 30 days"] },
+
+  // Customized Employment - Job Placement
+  { id: "ce-jp", category: "customized-jp", name: "Customized Job Placement", level: "One Level", intakeFee: 834, activityFee: 1534, outcomeFee: 2478, totalFee: 4846, description: "Customized job development using discovery profile to negotiate individualized position", requirements: ["Completed Discovery profile", "SDOP authorization", "Employer negotiation logs", "Customized job description", "Paystub or employer letter", "SDOR within 30 days"] },
+
+  // Job Placement Services
+  { id: "jp-1", category: "job-placement", name: "Job Placement", level: "Level 1", intakeFee: 665, activityFee: 618, outcomeFee: 1936, totalFee: 3219, description: "Standard competitive integrated employment placement", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Paystub or employer letter", "SDOR within 30 days"] },
+  { id: "jp-2", category: "job-placement", name: "Job Placement", level: "Level 2", intakeFee: 746, activityFee: 997, outcomeFee: 2216, totalFee: 3959, description: "Enhanced placement - additional barriers to employment", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Barrier documentation", "Paystub or employer letter", "SDOR within 30 days"] },
+  { id: "jp-3", category: "job-placement", name: "Job Placement", level: "Level 3", intakeFee: 746, activityFee: 1370, outcomeFee: 2216, totalFee: 4332, description: "Intensive placement - significant barriers requiring customized approaches", requirements: ["SDOP authorization", "5 site visits OR 3 interviews", "Customized plan documentation", "Paystub or employer letter", "SDOR within 30 days"] },
 
   // Intensive Training
   { id: "it-1", category: "intensive-training", name: "Intensive Training", level: "Level 1", intakeFee: 480, activityFee: 720, outcomeFee: 1440, totalFee: 2640, description: "Basic supported employment training on-site", requirements: ["Daily session logs with GPS", "Employer weekly check-in", "Skills taught documentation", "Stabilization SDOR"] },
@@ -128,6 +141,9 @@ export const bonuses: BonusDef[] = [
   { type: "rapid-placement", name: "Rapid Placement Bonus", amount: 535, maxPerCustomer: 1, trigger: "Job secured within 60 days of SDOP authorization", docsRequired: ["SDOP authorization date", "First day of employment date"] },
   { type: "rural-residence", name: "Rural Area Bonus (Residence)", amount: 375, maxPerCustomer: 1, trigger: "Customer lives in HRSA-defined rural area", docsRequired: ["HRSA Rural Health Tool PDF", "Address verification"] },
   { type: "rural-job", name: "Rural Area Bonus (Job Location)", amount: 375, maxPerCustomer: 1, trigger: "Job located in HRSA-defined rural area", docsRequired: ["HRSA Rural Health Tool PDF", "Employer address verification"] },
+  { type: "permanent-employment", name: "Permanent Employment Bonus", amount: 722, maxPerCustomer: 1, trigger: "Customer obtains permanent, competitive, integrated job", docsRequired: ["Paystub showing employment", "Employer letter confirming permanent status"] },
+  { type: "cba-permanent", name: "Permanent Employment Bonus (CBA)", amount: 722, maxPerCustomer: 1, trigger: "Customer obtains permanent job as secondary outcome of CBA (NOT TWE)", docsRequired: ["Paystub showing employment", "CBA report", "Employer letter"] },
+  { type: "cba-healthcare", name: "Healthcare Coverage Bonus (CBA)", amount: 722, maxPerCustomer: 1, trigger: "Customer obtains permanent job 30+ hrs/wk with employer healthcare as secondary outcome of CBA (NOT TWE)", docsRequired: ["Paystub showing 30+ hrs/wk", "Employer benefits letter", "CBA report"] },
 ];
 
 export const preEtsServices: PreEtsService[] = [
