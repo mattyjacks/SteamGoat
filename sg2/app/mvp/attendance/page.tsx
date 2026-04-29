@@ -183,10 +183,14 @@ export default function AttendancePage() {
   const [selectedClientDetail, setSelectedClientDetail] = useState<string | null>(null);
   const [newCaseNote, setNewCaseNote] = useState("");
 
+  // Date state
+  const [today, setToday] = useState("");
+  const [weekStartStr, setWeekStartStr] = useState("");
+
   // Timer ref
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Load from localStorage
+  // Load from localStorage and initialize dates
   useEffect(() => {
     try {
       const savedEntries = localStorage.getItem("pathready-attendance-entries");
@@ -196,6 +200,14 @@ export default function AttendancePage() {
       if (savedActive) setActiveEntry(JSON.parse(savedActive));
       if (savedClients) setClients(JSON.parse(savedClients));
     } catch {}
+    
+    // Initialize dates
+    const todayDate = new Date().toISOString().split("T")[0];
+    setToday(todayDate);
+    
+    const weekStart = new Date();
+    weekStart.setDate(weekStart.getDate() - weekStart.getDay());
+    setWeekStartStr(weekStart.toISOString().split("T")[0]);
   }, []);
 
   // Save entries
@@ -385,12 +397,8 @@ export default function AttendancePage() {
   /*  Computed Stats                                                   */
   /* ---------------------------------------------------------------- */
 
-  const today = new Date().toISOString().split("T")[0];
   const todayEntries = entries.filter((e) => e.date === today);
   const todayHours = todayEntries.reduce((sum, e) => sum + (e.duration || 0), 0);
-  const weekStart = new Date();
-  weekStart.setDate(weekStart.getDate() - weekStart.getDay());
-  const weekStartStr = weekStart.toISOString().split("T")[0];
   const weekEntries = entries.filter((e) => e.date >= weekStartStr);
   const weekHours = weekEntries.reduce((sum, e) => sum + (e.duration || 0), 0);
   const flaggedCount = entries.filter((e) => e.status === "flagged").length;
