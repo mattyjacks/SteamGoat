@@ -80,7 +80,6 @@ const recentInvoices: RecentInvoice[] = [
 ];
 
 const adminModules = [
-  { id: "fee-schedules", title: "Fee Schedules", description: "CRP-IL Exhibit L fee tables, bonuses, and service rates", icon: DollarSign, href: "/mvp/admin/fee-schedules", count: "22 services", color: "indigo" },
   { id: "invoice-rules", title: "Invoice Validation", description: "Automated validation rules, SDOR requirements, and payment logic", icon: FileText, href: "/mvp/admin/invoice-rules", count: "14 rules", color: "blue", comingSoon: true },
   { id: "bonus-config", title: "Bonus Configuration", description: "Performance bonus thresholds, eligibility criteria, and auto-detection", icon: TrendingUp, href: "/mvp/admin/bonus-config", count: "8 bonuses", color: "green", comingSoon: true },
   { id: "user-mgmt", title: "User Management", description: "Staff accounts, VRC assignments, role permissions", icon: Users, href: "/mvp/admin/users", count: "18 users", color: "purple", comingSoon: true },

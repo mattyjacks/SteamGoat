@@ -183,23 +183,27 @@ export default function Home() {
                 </div>
 
                 <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg p-6 text-white">
-                  <p className="text-sm font-semibold mb-4 opacity-90">Complete CRP-IL Fee Schedule (Exhibit L)</p>
-                  <div className="space-y-2 text-sm mb-6">
-                    <div className="flex items-center justify-between">
-                      <span>9 Service Categories</span>
-                      <span className="font-mono font-bold">$3.3K - $4.8K</span>
+                  <p className="text-sm font-semibold mb-4 opacity-90">Admin Dashboard & Analytics</p>
+                  <div className="space-y-3 text-sm mb-6">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                      <span>Real-time KPI tracking</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>7 Performance Bonuses</span>
-                      <span className="font-mono font-bold">$375 - $722</span>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                      <span>Revenue & placement analytics</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>Max Bonus/Customer</span>
-                      <span className="font-mono font-bold">$2,729</span>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                      <span>Alerts & performance tracking</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                      <span>Invoice & bonus management</span>
                     </div>
                   </div>
-                  <Link href="/mvp/admin/fee-schedules" className="block w-full bg-white text-emerald-700 font-semibold py-2 rounded-lg text-center hover:bg-emerald-50 transition">
-                    View Fee Schedule
+                  <Link href="/mvp/admin" className="block w-full bg-white text-emerald-700 font-semibold py-2 rounded-lg text-center hover:bg-emerald-50 transition">
+                    Access Admin Portal
                   </Link>
                 </div>
               </div>
